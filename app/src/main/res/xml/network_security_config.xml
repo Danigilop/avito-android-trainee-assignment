@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config>
+        <domain includeSubdomains="false">ngw.devices.sberbank.ru</domain>
+        <domain includeSubdomains="false">api.giga.chat</domain>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="@raw/russian_trusted_root_ca" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
